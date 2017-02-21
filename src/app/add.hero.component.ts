@@ -4,6 +4,7 @@
 import {Component, OnInit} from "@angular/core";
 import {HeroService} from "./hero.service";
 import {Hero} from "./hero";
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'add-hero',
@@ -17,11 +18,12 @@ export class AddHeroComponent implements OnInit {
     this.newHero = new Hero(this.heroService.getLastId() + 1);
   }
 
-  constructor(private heroService: HeroService){}
+  constructor(private heroService: HeroService, private location: Location){}
 
   newHero: Hero;
 
   addHero(hero: Hero): void {
     this.heroService.addHero(hero);
+    this.location.back();
   }
 }
