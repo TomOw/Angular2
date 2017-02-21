@@ -32,6 +32,13 @@ var HeroComponent = (function () {
     HeroComponent.prototype.goBack = function () {
         this.location.back();
     };
+    HeroComponent.prototype.addToHistory = function () {
+        if (this.hero.history == undefined) {
+            this.hero.history = [];
+        }
+        this.hero.history.push(this.hero.name);
+        this.hero.name = this.hero.newName;
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', hero_1.Hero)

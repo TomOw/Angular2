@@ -35,4 +35,12 @@ export class HeroComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  addToHistory(): void {
+    if (this.hero.history == undefined) {
+      this.hero.history = [];
+    }
+    this.hero.history.push(this.hero.name);
+    this.hero.name = this.hero.newName;
+  }
 }

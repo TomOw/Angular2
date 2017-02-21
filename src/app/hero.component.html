@@ -4,7 +4,17 @@
     <label>id: </label>{{hero.id}}</div>
   <div>
     <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name" />
+    <input [(ngModel)]="hero.newName" placeholder="name" (blur)="addToHistory()"/>
   </div>
   <button (click)="goBack()">Back</button>
+  <p>
+    Name history:
+  </p>
+  <div>
+    <ul>
+      <li *ngFor="let entry of hero.history">
+        {{entry}}
+      </li>
+    </ul>
+  </div>
 </div>
