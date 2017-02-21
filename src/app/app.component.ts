@@ -10,6 +10,7 @@ import {HeroService} from "./hero.service";
     <nav>
       <a routerLink="/heroes">Heroes</a>
       <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/add">Add hero</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -27,11 +28,6 @@ export class AppComponent implements OnInit {
   name = 'Angular';
 
   title = 'TOUR heroes';
-
-  hero: Hero = {
-    id: 1,
-    name: 'windstorm'
-  };
 
   heroes: Hero[];
 

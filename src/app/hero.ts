@@ -7,4 +7,10 @@ export class Hero {
   name: string;
   newName: string;
   history: string[];
+
+
+  constructor(id: number) {
+    this.id = id;
+    this.history = [];
+  }
 }

@@ -1,0 +1,9 @@
+<div style="display: flex; flex-direction: column">
+
+  <h1>Add hero</h1>
+  <h3>id: {{newHero.id}}</h3>
+  <label>name: </label>
+  <input type="text" [(ngModel)]="newHero.name">
+
+  <button (click)="addHero(newHero)">add</button>
+</div>

@@ -15,10 +15,6 @@ var AppComponent = (function () {
         this.heroService = heroService;
         this.name = 'Angular';
         this.title = 'TOUR heroes';
-        this.hero = {
-            id: 1,
-            name: 'windstorm'
-        };
     }
     AppComponent.prototype.ngOnInit = function () {
         this.getHeroes();
@@ -33,7 +29,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <nav>\n      <a routerLink=\"/heroes\">Heroes</a>\n      <a routerLink=\"/dashboard\">Dashboard</a>\n    </nav>\n    <router-outlet></router-outlet>\n  ",
+            template: "\n    <h1>{{title}}</h1>\n    <nav>\n      <a routerLink=\"/heroes\">Heroes</a>\n      <a routerLink=\"/dashboard\">Dashboard</a>\n      <a routerLink=\"/add\">Add hero</a>\n    </nav>\n    <router-outlet></router-outlet>\n  ",
             styleUrls: ['app/app.component.css'],
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService])
